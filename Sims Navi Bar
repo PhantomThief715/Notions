@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Playwrite+DE+LA:wght@100..400&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: "Playwrite DE LA", cursive;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: lowercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ABC6E8;
+		}
+
+		.border {
+			border: 2px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #A180B9;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="Sims" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user"></i> Sims</a>
+		<a id="fav-cc" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart-circle-check"></i> Favorite CC</a>
+		<a id="cc-shop" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-tags"></i> CC Shopping</a>
+		<a id="hub" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-comments"></i> Challenge Hub</a>
+		<a id="wheel" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-spinner"></i> Spinner Wheel</a>
+		<a id="database" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-circle-exclamation"></i> Master Database</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/reinealicis/Home-467a8f24c8014f7495280975634b5340?pvs=4", '_blank').focus();
+			else if (id == "Sims")
+				window.open("https://www.notion.so/reinealicis/sims-ceb695ed6d7a4ad995baddac01474256?pvs=4", '_blank').focus();
+			else if (id == "fave-cc")
+				window.open("https://www.notion.so/reinealicis/fav-cc-creators-e9036358a32f4fbf972c97cdb42eda5a?pvs=4", '_blank').focus();
+			else if (id == "cc-shop")
+				window.open("https://www.pinterest.com/MadameRoxaneSimstress/", '_blank').focus();
+			else if (id == "hub")
+				window.open("https://ts4challengehub.tumblr.com/", '_blank').focus();
+			else if (id == "wheel")
+				window.open("https://pickerwheel.com/", '_blank').focus();
+			else if (id == "database")
+				window.open("https://www.notion.so/reinealicis/Master-Sims-Database-e0cbb8fff57e46bebc243fc1e8181995?pvs=4", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
